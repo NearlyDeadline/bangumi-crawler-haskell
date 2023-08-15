@@ -1,0 +1,5 @@
+.stack-work/
+*~
+.vscode/
+LibSandbox.hs
+Sandbox.hs 

@@ -1,0 +1,113 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           bangumi-crawler-haskell
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/bangumi-crawler-haskell#readme>
+homepage:       https://github.com/githubuser/bangumi-crawler-haskell#readme
+bug-reports:    https://github.com/githubuser/bangumi-crawler-haskell/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2023 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/bangumi-crawler-haskell
+
+library
+  exposed-modules:
+      HTTP.Common
+      Lib
+      PostgreSQL.Common
+      Type.Common
+      Type.Main
+  other-modules:
+      Paths_bangumi_crawler_haskell
+  hs-source-dirs:
+      src
+  default-extensions:
+      NoImplicitPrelude
+      OverloadedStrings
+      TemplateHaskell
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      aeson
+    , base >=4.7 && <5
+    , bytestring
+    , classy-prelude
+    , http-conduit
+    , katip
+    , monad-logger
+    , persistent
+    , persistent-postgresql
+    , scalpel
+    , text
+    , time
+    , unordered-containers
+  default-language: Haskell2010
+
+executable bangumi-crawler-haskell-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_bangumi_crawler_haskell
+  hs-source-dirs:
+      app
+  default-extensions:
+      NoImplicitPrelude
+      OverloadedStrings
+      TemplateHaskell
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , bangumi-crawler-haskell
+    , base >=4.7 && <5
+    , bytestring
+    , classy-prelude
+    , http-conduit
+    , katip
+    , monad-logger
+    , persistent
+    , persistent-postgresql
+    , scalpel
+    , text
+    , time
+    , unordered-containers
+  default-language: Haskell2010
+
+test-suite bangumi-crawler-haskell-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_bangumi_crawler_haskell
+  hs-source-dirs:
+      test
+  default-extensions:
+      NoImplicitPrelude
+      OverloadedStrings
+      TemplateHaskell
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      aeson
+    , bangumi-crawler-haskell
+    , base >=4.7 && <5
+    , bytestring
+    , classy-prelude
+    , http-conduit
+    , katip
+    , monad-logger
+    , persistent
+    , persistent-postgresql
+    , scalpel
+    , text
+    , time
+    , unordered-containers
+  default-language: Haskell2010
