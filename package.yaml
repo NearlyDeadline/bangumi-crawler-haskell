@@ -33,6 +33,11 @@ dependencies:
 - time
 - katip
 - unordered-containers
+- opaleye
+- profunctors
+- product-profunctors
+- postgresql-simple
+- scientific
 
 default-extensions:
 - NoImplicitPrelude

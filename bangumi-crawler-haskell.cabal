@@ -25,8 +25,10 @@ source-repository head
 
 library
   exposed-modules:
+      BangumiOpaleye
       HTTP.Common
       Lib
+      LibSandbox
       PostgreSQL.Common
       Type.Common
       Type.Main
@@ -47,9 +49,14 @@ library
     , http-conduit
     , katip
     , monad-logger
+    , opaleye
     , persistent
     , persistent-postgresql
+    , postgresql-simple
+    , product-profunctors
+    , profunctors
     , scalpel
+    , scientific
     , text
     , time
     , unordered-containers
@@ -75,9 +82,14 @@ executable bangumi-crawler-haskell-exe
     , http-conduit
     , katip
     , monad-logger
+    , opaleye
     , persistent
     , persistent-postgresql
+    , postgresql-simple
+    , product-profunctors
+    , profunctors
     , scalpel
+    , scientific
     , text
     , time
     , unordered-containers
@@ -104,9 +116,14 @@ test-suite bangumi-crawler-haskell-test
     , http-conduit
     , katip
     , monad-logger
+    , opaleye
     , persistent
     , persistent-postgresql
+    , postgresql-simple
+    , product-profunctors
+    , profunctors
     , scalpel
+    , scientific
     , text
     , time
     , unordered-containers
